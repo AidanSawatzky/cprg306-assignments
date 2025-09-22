@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <h1>CPRG 306: Web Development 2 - Assignments</h1>
+      <main className="flex flex-col gap-[2px] row-start-2 items-center sm:items-start bg-gray-300 min-h-screen">
+        <h1 className="text-2xl w-full h-12 bg-blue-500">CPRG 306: Web Development 2 - Assignments</h1>
         <Link href="/week-1">Week 1</Link>
         <Link href="/week-2">Week 2</Link>
         <Link href="/week-3">Week 3</Link>

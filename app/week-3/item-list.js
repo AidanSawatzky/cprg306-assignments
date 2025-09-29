@@ -1,44 +1,64 @@
 import Item from "./item";
 export default function ItemList() {
 const item1 = {
-    name: "Apples", 
-    quantity: 3,
-     category: "Fruit"
+    name: "Milk", 
+    quantity: 4,
+     category: "Dairy"
     };
 const item2 = {
     name: "Bread",
-    quantity: 1, 
+    quantity: 2, 
     category: "Grains"
     };
 const item3 = {
-    name: "Carrots",
-    quantity: 5, 
-    category: "Vegetables"
-    };
-const item4 = {
-    name: "Chicken", 
-    quantity: 2, 
-    category: "Protein"
-    };
-const item5 = {
-    name: "Milk", 
-    quantity: 1, 
-    category: "Dairy"
-    };
-const item6 = {
-    name: "Eggs", 
+    name: "Eggs",
     quantity: 12, 
     category: "Dairy"
     };
+const item4 = {
+    name: "Bananas", 
+    quantity: 6, 
+    category: "Produce"
+    };
+const item5 = {
+    name: "Broccoli", 
+    quantity: 3, 
+    category: "Produce"
+    };
+const item6 = {
+    name: "Chicken Breasts", 
+    quantity: 1, 
+    category: "Meat"
+    };
 const item7 = {
-    name: "Rice", 
-    quantity: 1,
+    name: "Pasta Sauce", 
+    quantity: 3,
     category: "Grains"
     };
 const item8 = {
-    name: "Broccoli", 
+    name: "Spaghetti", 
     quantity: 2, 
-    category: "Vegetables"
+    category: "Dry Goods"
+    };
+const item9 = {
+    name: "Toilet Paper", 
+    quantity: 1, 
+    category: "Household"
+    };
+const item10 = {
+    name: "Paper Towels", 
+    quantity: 1, 
+    category: "Household"
+    };
+const item11 = {
+    name: "Dish Soap", 
+    quantity: 1,
+    category: "Household"
+    };
+const item12 = {
+    name: "Hand Soap", 
+    quantity: 4, 
+    category: "Household"
     };
     return (
         <section className= "flex flex-wrap justify-center"> 
@@ -50,6 +70,10 @@ const item8 = {
         <Item item={item6} />
         <Item item={item7} />
         <Item item={item8} />
+        <Item item={item9} />
+        <Item item={item10} />
+        <Item item={item11} />
+        <Item item={item12} />
         </section>
     );
 }

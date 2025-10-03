@@ -21,7 +21,7 @@ export default function Counter() {
       <div className="flex gap-4">
         <button
           onClick={decrement}
-          disable={quantity <= 0}
+          disabled={quantity <= 0}
           className={`px-4 py-2 rounded-md transition duration-200 focus:outline-none focus:ring-2 ${
             quantity <= 0
               ? "bg-gray-400 text-white cursor-not-allowed"

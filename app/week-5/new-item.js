@@ -45,25 +45,24 @@ export default function NewItem() {
           placeholder="Item Name"
           className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
-        <select
-          value={category}
-          onChange={(e) => setCategory(e.target.value)}
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
-        >
-          <option defaultValue="produce" selected="">
-            Produce
-          </option>
-          <option value="Dairy">Dairy</option>
-          <option value="Bakery">Bakery</option>
-          <option value="Meat">Meat</option>
-          <option value="Frozen_foods">Frozen Foods</option>
-          <option value="Canned_goods">Canned Goods</option>
-          <option value="Dry_goods">Dry Goods</option>
-          <option value="Beverages">Beverages</option>
-          <option value="Snacks">Snacks</option>
-          <option value="Household">Household</option>
-          <option value="Others">Others</option>
-        </select>
+<select
+  value={category}
+  onChange={(e) => setCategory(e.target.value)}
+  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+>
+  <option value="produce">Produce</option>
+  <option value="Dairy">Dairy</option>
+  <option value="Bakery">Bakery</option>
+  <option value="Meat">Meat</option>
+  <option value="Frozen_foods">Frozen Foods</option>
+  <option value="Canned_goods">Canned Goods</option>
+  <option value="Dry_goods">Dry Goods</option>
+  <option value="Beverages">Beverages</option>
+  <option value="Snacks">Snacks</option>
+  <option value="Household">Household</option>
+  <option value="Others">Others</option>
+</select>
+
       <div className="flex items-center gap-4 justify-center">
   <button
     type="button"

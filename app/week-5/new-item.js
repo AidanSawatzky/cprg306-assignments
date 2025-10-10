@@ -45,53 +45,53 @@ export default function NewItem() {
           placeholder="Item Name"
           className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
-<select
-  value={category}
-  onChange={(e) => setCategory(e.target.value)}
-  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
->
-  <option value="produce">Produce</option>
-  <option value="Dairy">Dairy</option>
-  <option value="Bakery">Bakery</option>
-  <option value="Meat">Meat</option>
-  <option value="Frozen_foods">Frozen Foods</option>
-  <option value="Canned_goods">Canned Goods</option>
-  <option value="Dry_goods">Dry Goods</option>
-  <option value="Beverages">Beverages</option>
-  <option value="Snacks">Snacks</option>
-  <option value="Household">Household</option>
-  <option value="Others">Others</option>
-</select>
+        <select
+          value={category}
+          onChange={(e) => setCategory(e.target.value)}
+          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+        >
+          <option value="produce">Produce</option>
+          <option value="Dairy">Dairy</option>
+          <option value="Bakery">Bakery</option>
+          <option value="Meat">Meat</option>
+          <option value="Frozen_foods">Frozen Foods</option>
+          <option value="Canned_goods">Canned Goods</option>
+          <option value="Dry_goods">Dry Goods</option>
+          <option value="Beverages">Beverages</option>
+          <option value="Snacks">Snacks</option>
+          <option value="Household">Household</option>
+          <option value="Others">Others</option>
+        </select>
 
-      <div className="flex items-center gap-4 justify-center">
-  <button
-    type="button"
-    onClick={decrement}
-    disabled={quantity <= 1}
-    className={`px-4 py-2 rounded-md transition duration-200 focus:outline-none focus:ring-2 ${
-      quantity <= 1
-        ? "bg-gray-400 text-white cursor-not-allowed"
-        : "bg-red-600 text-white hover:bg-red-700 active:bg-red-800 focus:ring-red-400"
-    }`}
-  >
-    -
-  </button>
-  <p className="text-2xl font-semibold text-gray-800 border border-gray-300 rounded-md px-4 py-2 shadow-sm min-w-[60px] text-center">
-    {quantity}
-  </p>
-  <button
-    type="button"
-    onClick={increment}
-    disabled={quantity >= 20}
-    className={`px-4 py-2 rounded-md transition duration-200 focus:outline-none focus:ring-2 ${
-      quantity >= 20
-        ? "bg-gray-400 text-white cursor-not-allowed"
-        : "bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800 focus:ring-blue-400"
-    }`}
-  >
-    +
-  </button>
-</div>
+        <div className="flex items-center gap-4 justify-center">
+          <button
+            type="button"
+            onClick={decrement}
+            disabled={quantity <= 1}
+            className={`px-4 py-2 rounded-md transition duration-200 focus:outline-none focus:ring-2 ${
+              quantity <= 1
+                ? "bg-gray-400 text-white cursor-not-allowed"
+                : "bg-red-600 text-white hover:bg-red-700 active:bg-red-800 focus:ring-red-400"
+            }`}
+          >
+            -
+          </button>
+          <p className="text-2xl font-semibold text-gray-800 border border-gray-300 rounded-md px-4 py-2 shadow-sm min-w-[60px] text-center">
+            {quantity}
+          </p>
+          <button
+            type="button"
+            onClick={increment}
+            disabled={quantity >= 20}
+            className={`px-4 py-2 rounded-md transition duration-200 focus:outline-none focus:ring-2 ${
+              quantity >= 20
+                ? "bg-gray-400 text-white cursor-not-allowed"
+                : "bg-blue-600 text-white hover:bg-blue-700 active:bg-blue-800 focus:ring-blue-400"
+            }`}
+          >
+            +
+          </button>
+        </div>
 
         <button
           type="submit"
@@ -103,4 +103,3 @@ export default function NewItem() {
     </main>
   );
 }
-

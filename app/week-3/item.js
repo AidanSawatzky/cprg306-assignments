@@ -1,10 +1,10 @@
-export default function Item({ item }) {
+export default function Item({ name, quantity, category }) {
     return (
-        <section className ="bg-slate-400 p-4 w-1/5 m-4" > 
-
-        <h2 className ="text-2xl font-serif font-bold">{item.name}</h2>
-        <p> Buy {item.quantity} in { item.category} </p>
-        </section>       
-    )
+        <li className="bg-slate-400 p-4 m-4 flex flex-col justify-between w-1/5 list-none">
+            <h2 className="text-2xl font-serif font-bold">{name}</h2>
+            <p>Buy {quantity} in {category}</p>
+        </li>
+    );
 }
+
 

@@ -14,43 +14,42 @@ export default function ItemList({ items, onItemSelect }) {
     return 0;
   });
 
-return (
-  <section className="flex flex-col items-center gap-4 p-1">
-    <div className="flex gap-2 w-full max-w-sm justify-center px-4">
-      <button
-        onClick={() => setSortBy("name")}
-        className={`px-4 py-2 rounded transition ${
-          sortBy === "name"
-            ? "bg-gray-700 text-white hover:bg-gray-600"
-            : "bg-white text-black shadow"
-        }`}
-      >
-        Sort by Name
-      </button>
-      <button
-        onClick={() => setSortBy("category")}
-        className={`px-4 py-2 rounded transition ${
-          sortBy === "category"
-            ? "bg-gray-700 text-white hover:bg-gray-600"
-            : "bg-white text-black shadow"
-        }`}
-      >
-        Sort by Category
-      </button>
-    </div>
+  return (
+    <section className="flex flex-col items-center gap-6 p-6">
+      <div className="flex gap-4 w-full max-w-md justify-center">
+        <button
+          onClick={() => setSortBy("name")}
+          className={`px-5 py-2.5 rounded-full font-semibold transition duration-200 ease-in-out ${
+            sortBy === "name"
+              ? "bg-slate-800 text-white shadow-md hover:bg-slate-700"
+              : "bg-white text-gray-800 border border-gray-300 hover:bg-gray-100"
+          }`}
+        >
+          Sort by Name
+        </button>
+        <button
+          onClick={() => setSortBy("category")}
+          className={`px-5 py-2.5 rounded-full font-semibold transition duration-200 ease-in-out ${
+            sortBy === "category"
+              ? "bg-slate-800 text-white shadow-md hover:bg-slate-700"
+              : "bg-white text-gray-800 border border-gray-300 hover:bg-gray-100"
+          }`}
+        >
+          Sort by Category
+        </button>
+      </div>
 
-    <div className="flex flex-wrap justify-center gap-4">
-      {sortedItems.map((item) => (
-        <Item
-          key={item.id}
-          name={item.name}
-          quantity={item.quantity}
-          category={item.category}
-          onSelect={() => onItemSelect(item)} 
-        />
-      ))}
-    </div>
-  </section>
-);
-
+      <div className="flex flex-wrap justify-center gap-4 w-full max-w-5xl">
+        {sortedItems.map((item) => (
+          <Item
+            key={item.id}
+            name={item.name}
+            quantity={item.quantity}
+            category={item.category}
+            onSelect={() => onItemSelect(item)}
+          />
+        ))}
+      </div>
+    </section>
+  );
 }

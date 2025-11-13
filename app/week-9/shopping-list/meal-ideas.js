@@ -29,26 +29,27 @@ function MealIdeas({ ingredient }) {
   }, [ingredient]);
 
   return (
-<div className="bg-white rounded-lg shadow-md p-6 w-full max-w-md">
-  <h2 className="text-2xl font-bold mb-4 text-blue-600">Meal Ideas</h2>
+<div className="bg-slate-800 text-white rounded-2xl shadow-xl p-6 w-full max-w-md border border-slate-700">
+  <h2 className="text-2xl font-semibold mb-4 text-slate-100 tracking-wide">Meal Ideas</h2>
 
   {!ingredient ? (
-    <p className="text-gray-500 italic">Choose an item to see ideas.</p>
+    <p className="text-slate-400 italic">Choose an item to see ideas.</p>
   ) : hasSearched && meals.length === 0 ? (
-    <p className="text-red-500 italic">No recipes found.</p>
+    <p className="text-red-400 italic">No recipes found.</p>
   ) : (
     <ul className="flex flex-col gap-4">
       {meals.map((meal) => (
         <li
           key={meal.idMeal}
-          className="bg-gray-100 border border-gray-300 rounded-lg p-4 shadow-sm"
+          className="bg-slate-700 border border-slate-600 rounded-xl p-4 shadow-sm hover:shadow-md transition"
         >
-          <p className="text-lg font-medium text-gray-800">{meal.strMeal}</p>
+          <p className="text-lg font-medium text-slate-100">{meal.strMeal}</p>
         </li>
       ))}
     </ul>
   )}
 </div>
+
   );
 }
 

@@ -25,21 +25,21 @@ export default function Page() {
   };
 
   return (
-    <main className="flex flex-col gap-[32px] sm:items-center bg-gray-300 min-h-screen">
-      <div className="w-full h-12 bg-blue-500">
-        <h1 className="text-3xl font-bold text-center">Shopping List</h1>
-      </div>
+<main className="flex flex-col gap-10 sm:items-center bg-slate-900 text-white min-h-screen px-4 py-6">
+  <div className="w-full bg-slate-800 py-4 shadow-md rounded-xl">
+    <h1 className="text-4xl font-bold text-center text-slate-100 tracking-wide">Shopping List</h1>
+  </div>
 
-      <div className="flex flex-col md:flex-row justify-center items-start gap-8 px-4 pt-8">
-        <div className="md:w-1/2 flex flex-col items-center pt-4">
-          <NewItem onAddItem={handleAddItem} />
-          <ItemList items={items} onItemSelect={handleItemSelect} />
-        </div>
+  <div className="flex flex-col md:flex-row justify-center items-start gap-10 w-full max-w-6xl pt-6">
+    <div className="md:w-1/2 flex flex-col items-center gap-8">
+      <NewItem onAddItem={handleAddItem} />
+      <ItemList items={items} onItemSelect={handleItemSelect} />
+    </div>
 
-        <div className="md:w-1/2 flex justify-center pt-4">
-          <MealIdeas ingredient={selectedItemName} />
-        </div>
-      </div>
-    </main>
+    <div className="md:w-1/4 flex justify-center">
+      <MealIdeas ingredient={selectedItemName} />
+    </div>
+  </div>
+</main>
   );
 }

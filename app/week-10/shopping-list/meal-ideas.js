@@ -66,7 +66,7 @@ function MealIdeas({ ingredient }) {
         {meal.strMeal}
       </p>
 
-      {/* If this meal is the selected one, show its ingredients */}
+
       {selectedMeal && selectedMeal.idMeal === meal.idMeal && (
         <div className="mt-4">
           <h4 className="text-slate-200 font-semibold mb-2">Ingredients:</h4>
